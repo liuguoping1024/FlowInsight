@@ -1,0 +1,284 @@
+# FlowInsight - 资金流洞察系统
+# Git忽略配置文件
+
+# ============================================
+# 项目特定忽略
+# ============================================
+
+# Markdown文档（任务说明、个人笔记等）
+*.md
+!README.md
+# 如果你想保留README.md，取消上面一行的注释
+
+# YAML配置文件（包含敏感配置）
+*.yaml
+*.yml
+
+# ============================================
+# Python相关
+# ============================================
+
+# 字节码文件
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C扩展
+*.so
+
+# 分发/打包
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# 单元测试/覆盖率
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# 虚拟环境
+venv/
+ENV/
+env/
+.venv
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# PEP 582
+__pypackages__/
+
+# ============================================
+# 数据库文件
+# ============================================
+
+# SQLite数据库
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+
+# 数据备份
+*.backup
+*.bak
+
+# ============================================
+# 日志文件
+# ============================================
+
+# 所有日志文件
+*.log
+logs/
+log/
+
+# ============================================
+# 数据文件
+# ============================================
+
+# 原始数据文件
+data/*.csv
+data/*.xlsx
+data/*.json
+data/*.pickle
+data/*.pkl
+
+# 但保留data目录结构
+!data/.gitkeep
+
+# ============================================
+# 临时文件
+# ============================================
+
+# 临时文件夹
+tmp/
+temp/
+cache/
+
+# 临时数据文件
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# ============================================
+# IDE和编辑器
+# ============================================
+
+# PyCharm
+.idea/
+*.iml
+*.iws
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+
+# ============================================
+# 操作系统
+# ============================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.directory
+.Trash-*
+
+# ============================================
+# 敏感信息
+# ============================================
+
+# 环境变量文件
+.env
+.env.local
+.env.*.local
+
+# 密钥文件
+*.key
+*.pem
+*.cert
+*.crt
+secrets/
+credentials/
+
+# 个人配置
+config.local.*
+settings.local.*
+my_*.yaml
+my_*.yml
+personal_*.yaml
+
+# ============================================
+# 测试和调试
+# ============================================
+
+# 测试数据
+test_data/
+debug/
+*.debug
+
+# 性能分析
+*.prof
+*.lprof
+
+# ============================================
+# 前端相关（如果使用）
+# ============================================
+
+# Node modules（如果用到npm）
+node_modules/
+
+# 编译后的静态资源
+static/dist/
+static/build/
+
+# ============================================
+# 项目特定数据
+# ============================================
+
+# 股票数据缓存
+cache/stock_data/
+cache/market_data/
+
+# 用户自定义股票池
+my_stocks.txt
+my_positions.txt
+watchlist.txt
+
+# 导出的报告
+reports/*.html
+reports/*.pdf
+exports/
+
+# 截图和图片（可选）
+screenshots/
+*.png
+*.jpg
+*.jpeg
+*.gif
+
+# ============================================
+# 其他
+# ============================================
+
+# 压缩文件
+*.zip
+*.tar.gz
+*.rar
+
+# 备份文件
+backup/
+backups/
+*.backup
+
+# 草稿文件
+drafts/
+TODO.txt
+NOTES.txt
