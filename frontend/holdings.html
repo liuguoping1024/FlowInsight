@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的持股 - FlowInsight</title>
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/pages/holdings.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="index.html">FlowInsight</a>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">排行榜</a>
+                <a href="holdings.html" class="nav-link active">我的持股</a>
+                <a href="watchlist.html" class="nav-link">我的收藏</a>
+                <span class="nav-user" id="navUser">
+                    <a href="login.html" class="nav-link">登录</a>
+                </span>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <header class="page-header">
+            <h1>我的持股</h1>
+            <div class="header-actions">
+                <button id="addHoldingBtn" class="btn btn-primary">添加持股</button>
+                <button id="refreshBtn" class="btn">刷新</button>
+            </div>
+        </header>
+        
+        <div class="summary-card">
+            <div class="summary-item">
+                <div class="summary-label">总市值</div>
+                <div class="summary-value" id="totalValue">--</div>
+            </div>
+            <div class="summary-item">
+                <div class="summary-label">总成本</div>
+                <div class="summary-value" id="totalCost">--</div>
+            </div>
+            <div class="summary-item">
+                <div class="summary-label">总盈亏</div>
+                <div class="summary-value" id="totalProfitLoss">--</div>
+            </div>
+            <div class="summary-item">
+                <div class="summary-label">盈亏比例</div>
+                <div class="summary-value" id="profitLossRate">--</div>
+            </div>
+        </div>
+        
+        <div class="table-container">
+            <table class="table" id="holdingsTable">
+                <thead>
+                    <tr>
+                        <th>股票代码</th>
+                        <th>股票名称</th>
+                        <th>成本价</th>
+                        <th>当前价</th>
+                        <th>持股数量</th>
+                        <th>市值</th>
+                        <th>盈亏</th>
+                        <th>盈亏比例</th>
+                        <th>买入日期</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <tr>
+                        <td colspan="10" class="loading">加载中...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <!-- 添加/编辑持股模态框 -->
+    <div id="holdingModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">添加持股</h2>
+                <button class="modal-close" id="closeModal">&times;</button>
+            </div>
+            <form id="holdingForm">
+                <div class="form-group">
+                    <label for="stockCode">股票代码 *</label>
+                    <input type="text" id="stockCode" name="stock_code" required placeholder="如：600118">
+                </div>
+                <div class="form-group">
+                    <label for="costPrice">成本价 *</label>
+                    <input type="number" id="costPrice" name="cost_price" step="0.01" required placeholder="如：10.50">
+                </div>
+                <div class="form-group">
+                    <label for="quantity">持股数量 *</label>
+                    <input type="number" id="quantity" name="quantity" required placeholder="如：1000">
+                </div>
+                <div class="form-group">
+                    <label for="buyDate">买入日期</label>
+                    <input type="date" id="buyDate" name="buy_date">
+                </div>
+                <div class="form-group">
+                    <label for="notes">备注</label>
+                    <textarea id="notes" name="notes" rows="3"></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn" id="cancelBtn">取消</button>
+                    <button type="submit" class="btn btn-primary">保存</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/utils.js"></script>
+    <script src="assets/js/api.js"></script>
+    <script src="assets/js/pages/holdings.js"></script>
+</body>
+</html>
+

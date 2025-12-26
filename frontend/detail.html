@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>股票详情 - FlowInsight</title>
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/pages/detail.css">
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- 返回按钮 -->
+        <div class="back-nav">
+            <a href="index.html" class="back-btn">← 返回排行榜</a>
+        </div>
+
+        <!-- 股票基本信息 -->
+        <div class="stock-header" id="stockHeader">
+            <div class="loading">加载中...</div>
+        </div>
+
+        <!-- 今日资金流向详情 -->
+        <div class="card">
+            <div class="card-header">今日资金流向</div>
+            <div class="capital-flow-detail" id="todayFlow">
+                <div class="loading">加载中...</div>
+            </div>
+        </div>
+
+        <!-- 资金流向趋势图 -->
+        <div class="card">
+            <div class="card-header">资金流向趋势（近30天）</div>
+            <div class="chart-container">
+                <div id="trendChart" style="width: 100%; height: 400px;"></div>
+            </div>
+        </div>
+
+        <!-- 历史资金流向数据表格 -->
+        <div class="card">
+            <div class="card-header">历史资金流向</div>
+            <div class="table-container">
+                <table class="table" id="historyTable">
+                    <thead>
+                        <tr>
+                            <th>日期</th>
+                            <th>主力净流入</th>
+                            <th>主力占比</th>
+                            <th>超大单净流入</th>
+                            <th>超大单占比</th>
+                            <th>收盘价</th>
+                            <th>涨跌幅</th>
+                            <th>成交量</th>
+                            <th>成交额</th>
+                        </tr>
+                    </thead>
+                    <tbody id="historyTableBody">
+                        <tr>
+                            <td colspan="9" class="loading">加载中...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- 引入脚本 -->
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/utils.js"></script>
+    <script src="assets/js/api.js"></script>
+    <script src="assets/js/pages/detail.js"></script>
+</body>
+</html>
+

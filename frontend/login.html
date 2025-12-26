@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户登录 - FlowInsight</title>
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/pages/auth.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-box">
+            <div class="auth-header">
+                <h1>FlowInsight</h1>
+                <p>股票资金流向监控分析系统</p>
+            </div>
+            
+            <div class="auth-tabs">
+                <button class="tab-btn active" data-tab="login">登录</button>
+                <button class="tab-btn" data-tab="register">注册</button>
+            </div>
+            
+            <!-- 登录表单 -->
+            <form id="loginForm" class="auth-form active">
+                <div class="form-group">
+                    <label for="loginUsername">用户名</label>
+                    <input type="text" id="loginUsername" name="username" required autocomplete="username">
+                </div>
+                
+                <div class="form-group">
+                    <label for="loginPassword">密码</label>
+                    <input type="password" id="loginPassword" name="password" required autocomplete="current-password">
+                </div>
+                
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary btn-block">登录</button>
+                </div>
+                
+                <div id="loginError" class="error-message" style="display: none;"></div>
+            </form>
+            
+            <!-- 注册表单 -->
+            <form id="registerForm" class="auth-form">
+                <div class="form-group">
+                    <label for="registerUsername">用户名</label>
+                    <input type="text" id="registerUsername" name="username" required autocomplete="username">
+                </div>
+                
+                <div class="form-group">
+                    <label for="registerPassword">密码</label>
+                    <input type="password" id="registerPassword" name="password" required autocomplete="new-password">
+                </div>
+                
+                <div class="form-group">
+                    <label for="registerEmail">邮箱（可选）</label>
+                    <input type="email" id="registerEmail" name="email" autocomplete="email">
+                </div>
+                
+                <div class="form-group">
+                    <label for="registerPhone">手机号（可选）</label>
+                    <input type="tel" id="registerPhone" name="phone" autocomplete="tel">
+                </div>
+                
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary btn-block">注册</button>
+                </div>
+                
+                <div id="registerError" class="error-message" style="display: none;"></div>
+            </form>
+            
+            <div class="auth-footer">
+                <p>无需登录也可浏览排行榜和详情页</p>
+                <a href="index.html" class="link">返回首页</a>
+            </div>
+        </div>
+    </div>
+    
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/api.js"></script>
+    <script src="assets/js/pages/login.js"></script>
+</body>
+</html>
+
