@@ -141,7 +141,7 @@ async def get_stock_capital_flow_history(
     db: Session = Depends(get_db)
 ):
     """
-    获取股票资金流向历史数据
+    获取资金流向历史数据
     
     这个接口会重定向到 /capital-flow/stock/{stock_code}
     """

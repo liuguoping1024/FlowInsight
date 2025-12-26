@@ -107,7 +107,7 @@ const API = {
     },
     
     /**
-     * 获取股票资金流向历史
+     * 获取资金流向历史
      * @param {number|string} stockCode - 股票代码
      * @param {object} params - 查询参数（days等）
      * @returns {Promise}

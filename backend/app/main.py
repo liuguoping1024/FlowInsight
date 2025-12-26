@@ -9,7 +9,7 @@ from app.core.config import settings
 app = FastAPI(
     title=settings.PROJECT_NAME,
     version=settings.PROJECT_VERSION,
-    description="股票资金流向监控分析系统",
+    description="资金流向监控分析系统",
     docs_url="/docs",
     redoc_url="/redoc",
 )
